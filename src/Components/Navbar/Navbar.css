@@ -1,0 +1,21 @@
+li {
+  list-style: none;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+li:hover {
+  color: red;
+  cursor: pointer;
+}
+.nav {
+  color: blue;
+  font-weight: 600;
+  margin-left: 950px;
+}
+sup {
+  background-color: red;
+  padding: 3px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 700;
+}

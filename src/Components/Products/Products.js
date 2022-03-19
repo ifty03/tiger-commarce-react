@@ -1,8 +1,9 @@
 
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import ReactModal from '../ReactModal/ReactModal';
 
-const Products = ({product}) => {
-    const {id,title,price,description,image,rating}=product;
+const Products = (product) => {
+    const {id,title,price,description,image,rating}=product.product;
     return (
         <div className='col-sm-4 mt-4 shadow-sm'>
             <Card style={{ width: '18rem' }}>
@@ -16,9 +17,9 @@ const Products = ({product}) => {
             <p><strong>Price:-</strong> {price}</p>
             </Card.Text>
             <div className='d-flex'>
-            <button className='btn btn-success ms-2'>Add to Cart</button>
+            <button onClick={product.cart} className='btn btn-success ms-2'>Add to Cart</button>
             <button className='btn btn-danger ms-2'>Delete</button>
-            <button className='btn btn-primary ms-2'>Details</button>
+            <ReactModal product={product.product}></ReactModal>
             </div>
             </Card.Body>
             </Card>
