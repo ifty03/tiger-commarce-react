@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Navbar cart={cart}></Navbar>
-      <h1>Tiger commerce with React-js</h1>
+      <h1>Tiger commerce with React</h1>
     <div className='row container mx-auto'>
     {
       products.map(product=><Products cart={setCountCart} key={product.id} product={product}></Products>)
